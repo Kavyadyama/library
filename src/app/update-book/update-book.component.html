@@ -1,0 +1,48 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <h5>Update data</h5>
+                <div class="row">
+                    <form>
+                        <div class="from-group mb-2">
+                            <label for="bookid" class="form-label">Book id</label>
+                            <input type="text" class="form-control" [(ngModel)]="book.id" name="bookid"
+                                placeholder="Enter Bookid">
+                        </div>
+
+                        <div class="from-group mb-2">
+                            <label for="name" class="form-label">Enter name</label>
+                            <input type="text" class="form-control" [(ngModel)]="book.name" name="name"
+                                placeholder="Enter name">
+                        </div>
+
+                        <div class="from-group mb-2">
+                            <label for="author" class="form-label">Enter Author</label>
+                            <input type="text" class="form-control" [(ngModel)]="book.author" name="author"
+                                placeholder="Enter email">
+                        </div>
+
+                        <div class="from-group mb-2">
+                            <label for="year" class="form-label">Enter Year</label>
+                            <input type="text" class="form-control" [(ngModel)]="book.year" name="year"
+                                placeholder="Enter city">
+                        </div>
+                        
+                        <div class="from-group mb-2">
+                            <label for="price" class="form-label">Enter price</label>
+                            <input type="text" class="form-control" [(ngModel)]="book.price" name="price"
+                                placeholder="Enter price">
+                        </div>
+
+
+                    </form>
+                </div>
+                <div>
+                    <button (click)="update()" class="btn btn-success">Update</button>&nbsp;
+                    <button routerLink="/" class="btn btn-dark">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

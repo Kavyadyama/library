@@ -1,0 +1,17 @@
+.d-flex{
+   margin-top: 15px;
+}
+.forloop{
+    padding: 10px;
+    display: inline-flex;
+
+
+} 
+.input-group rounded{
+    margin-top: 100px;
+    padding-top: 130px;
+    margin-right: 0.5%;
+    margin-left: 1%;
+    margin-bottom: 2%;
+
+}

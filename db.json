@@ -1,0 +1,74 @@
+{
+  "books": [
+    {
+      "bookid": 2556,
+      "imgSrc": "../../assets/wings-of-fire.jpg",
+      "name": "wings of fire",
+      "author": "arun tiwari",
+      "year": "1999",
+      "price": 450,
+      "id": 1
+    },
+    {
+      "bookid": 236,
+      "imgSrc": "../../assets/little bk of jy.jpg",
+      "name": "The little Book of Joy",
+      "author": "Dalai Lama & Desmond Tutu",
+      "year": "2022",
+      "price": 780,
+      "id": 2
+    },
+    {
+      "bookid": 652,
+      "imgSrc": "../../assets/fearless-governance.jpg",
+      "name": "Fearless Governance ",
+      "author": "Dr. Kiran Bedi ",
+      "year": "2022",
+      "price": 500,
+      "id": 3
+    },
+    {
+      "bookid": 5847,
+      "imgSrc": "../../assets/hear urself.jpg",
+      "name": "Hear Yourself",
+      "author": "Prem Rawat",
+      "year": "2020",
+      "price": 450,
+      "id": 4
+    },
+    {
+      "bookid": 6325,
+      "name": "A Placed Home",
+      "imgSrc": "../../assets/a plcecld hm.jpg",
+      "author": "Preeti Shanoy",
+      "year": "2022",
+      "price": "299",
+      "id": 5
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1,
+      "studname": "suma",
+      "semester": "3",
+      "usn": "003"
+    },
+    {
+      "studname": "kusum",
+      "semester": 6,
+      "usn": "006",
+      "id": 2
+    },
+    {
+      "studname": "kiran",
+      "semester": 8,
+      "usn": "010",
+      "id": 4
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

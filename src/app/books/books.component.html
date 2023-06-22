@@ -1,0 +1,84 @@
+<div class="books">
+  <nav>
+    <div class="container">
+      <div class="d-flex">
+        <button class="btn btn-outline-secondary me-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Books</button>
+        <div class="search-Books">
+          <input type="search" class="form-control" name="searchBooks" placeholder="Search Books"
+            (input)="searchBook($event)">
+        </div>
+      </div>
+
+    </div>
+  </nav>
+<div class="modal fade mt-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div style="background-color: #30E3CA;" class="modal-header">
+          <h5 style="color: white;" class="modal-title" id="exampleModalLabel">ADD BOOK DATA</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="bookform">
+            <div class="from-group mb-2">
+              <label for="bookid" class="form-label">Book Id</label>
+              <input type="number" class="form-control" formControlName="bookid" name="bookid" placeholder="Enter bookid">
+            </div>
+            <div class="from-group mb-2">
+              <label for="name" class="form-label">Book Name</label>
+              <input type="text" class="form-control" formControlName="name" name="name" placeholder="Enter bookname">
+            </div>
+
+            <div class="from-group mb-2">
+              <label for="author" class="form-label">Author</label>
+              <input type="text" class="form-control" formControlName="author" name="author"
+                placeholder="Enter author">
+            </div>
+           <div class="from-group mb-2">
+              <label for="year" class="form-label">Published Year</label>
+              <input type="text" class="form-control" formControlName="year" name="year" placeholder="Enter Year">
+            </div>
+            <div class="from-group mb-2">
+              <label for="price" class="form-label">Price</label>
+              <input type="number" class="form-control" formControlName="price" name="price" placeholder="Enter price">
+            </div>
+          </form>
+        </div>
+        <div style="background-color: #30E3CA" class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+          <button (click)="addBook(this.bookform.value)" type="button" class="button-84">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid mt-3">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Book Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Author</th>
+          <th scope="col">Year</th>
+          <th scope="col">Price</th>
+          <th scope="col">Update</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data">
+          <td>{{item.bookid}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.author}}</td>
+          <td>{{item.year}}</td>
+          <td>{{item.price}}</td>
+          <td><button type="button" class="btn btn-outline-secondary btn-small ps-2 w-75 ms-3" routerLink="/update-book/{{item.id}}">Edit</button></td> 
+          <td><button type="button" class="btn btn-outline-secondary  btn-small ps-2 w-75 ms-3 " (click)="deleteBook(item.id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+

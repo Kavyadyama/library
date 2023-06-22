@@ -1,0 +1,15 @@
+<div class="d-flex">
+    <input type="search" class="form-control mt-2 mb-3 ms-5 me-5" name="searchBooks" placeholder="Search Books"
+        (input)="searchBook($event)">
+</div>
+<div class="forloop" *ngFor="let item of data">
+  <div class="card ms-3" style="width:16rem">
+    <img class="card-img-top" src={{item.imgSrc}} style="height: 15rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <h6 class="card-title">{{item.author}}</h6>
+      <p class="card-title">published  {{item.year}}</p>
+      <p>₹{{item.price}}.00</p>
+    </div>
+  </div>
+</div>
